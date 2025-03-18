@@ -1,6 +1,20 @@
 In this Repo I'll create some projects related to web scrapping 
 
-1- in the uploaded YT_ipynb you'll find a very detailed guide to web scrapping using Youtube API 
+1- YouTube Channel Analytics
+
+Overview
+
+The YouTube Channel Analytics project is a data-driven web application that scrapes data from YouTube to analyze the highest-viewed and most-subscribed YouTube channels. The project provides insights into trends, engagement metrics, and content strategies used by top creators.
+
+Features
+
+Web Scraping: Extracts data on top YouTubers using the YouTube API.
+
+Data Analysis: Analyzes subscriber count, total views, video counts, and engagement metrics.
+
+Trend Identification: Identifies patterns in content strategies among high-performing channels.
+
+Visualization: Generates charts and graphs to present the findings in an interactive way.
 
 2- YouTube Video Summarizer
 Overview 
