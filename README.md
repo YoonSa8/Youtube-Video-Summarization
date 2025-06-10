@@ -32,66 +32,30 @@ Topic Modeling: Applies Latent Dirichlet Allocation (LDA) to extract key topics.
 
 Sentiment Analysis: Uses TextBlob to analyze the sentiment (polarity and subjectivity) of the transcript.
 
-3-  CV-Job Matching System using scrapped Linkedin jobs
+3- 🕵️ LinkedIn Job Scraper Module
+This module automates the process of scraping job listings from LinkedIn Jobs using Selenium and BeautifulSoup. It's intended as the first step in building a candidate-job ranking system by collecting job descriptions for further analysis and embedding.
 
-📌 Project Overview
+linkedin_scraper/
+│
+├── scraper.py             # Main scraping script
+├── requirements.txt       # Python dependencies
+├── page_source.html       # Raw HTML of LinkedIn search page (sample)
+├── single_job_page.html   # HTML of an individual job posting (sample)
+├── data/
+│   └── jobs.csv           # Output CSV with scraped job listings
 
-This project evaluates how well a candidate’s CV matches a given job description. It uses TF-IDF (Term Frequency-Inverse Document Frequency) and Cosine Similarity to compute similarity scores between job descriptions and CVs.
+🚀 Features
+Searches LinkedIn for jobs with specific keywords (e.g., “Data Scientist”, “Software Engineer”).
 
-📂 Project Structure
+Scrolls and loads multiple job cards using Selenium.
 
-📁 CV-Job Matching
-│── 📂 data
-│   ├── extracted_cvs.csv  (Extracted text from CVs)
-│   ├── processed_job_descriptions.csv  (Cleaned job descriptions)
-│   ├── cv_job_similarity_scores.csv  (Similarity scores between CVs & jobs)
-│   ├── top_matched_cvs.csv  (Best CV match for each job)
-│── 📂 scripts
-│   ├── extract_cvs.py  (Extract text from DOCX CVs)
-│   ├── extract_jobs.py  (Preprocess job descriptions)
-│   ├── compute_similarity.py  (TF-IDF similarity calculation)
-│   ├── rank_matches.py  (Rank best CVs for each job)
-│── README.md  (Project Documentation)
+Clicks into each job card to extract:
 
+✅ Job Title
 
----
+✅ Company Name
 
-🛠️ How It Works
+✅ Full Job Description
 
-1️⃣ Extract CV Text and scrape LinkedIn posted jobs
-
-Reads multiple DOCX CV files.
-
-Extracts raw text from each CV.
-
-Stores the extracted text in a structured CSV file.
-
-Scrape linkedIn jobs and Clean job descriptions
-
-2️⃣ Process Job Descriptions
-
-Loads job descriptions from a CSV file.
-
-Cleans and prepares job text.
-
-
-3️⃣ Compute Similarity Scores
-
-Uses TF-IDF vectorization to convert CVs and job descriptions into numerical vectors.
-
-Computes Cosine Similarity to measure how closely each CV matches each job.
-
-Outputs a similarity matrix where higher scores indicate a better match.
-
-
-4️⃣ Rank the Best Matches
-
-Sorts CVs for each job by similarity score.
-
-Extracts the top-matching CV for each job.
-
-Saves ranked results in a CSV file.
-
-
-
+Saves the scraped data into a structured CSV file.
 ---
